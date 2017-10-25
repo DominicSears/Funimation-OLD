@@ -1,0 +1,9 @@
+﻿<Application
+    x:Class="Funimaion_OLD.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Funimaion_OLD"
+    RequestedTheme="Light">
+
+</Application>
+

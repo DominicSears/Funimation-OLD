@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Funimaion_OLD.settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Funimaion_OLD"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel Grid.Column="0">
+            <TextBlock x:ConnectionId='14' Name="langTitle" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Margin="20,0,0,0"/>
+            <TextBlock x:ConnectionId='15' Name="qualityTitle" Text="" RelativePanel.RightOf="langTitle" FontWeight="Bold" FontSize="20"/>
+        </RelativePanel>
+        <TextBlock x:ConnectionId='1' Grid.ColumnSpan="5" Name = "dos" Text="Sub or Dub?" Grid.Row="1" FontSize="20" Margin="20,10,20,10"/>
+        <StackPanel Margin="20,5,0,0" Grid.Row="2" Orientation="Vertical">
+            <RadioButton x:ConnectionId='12' Name="sub" Content="Sub" GroupName="lang"                           />
+            <RadioButton x:ConnectionId='13' Name="dub" Content="Dub" GroupName="lang"                           />
+        </StackPanel>
+        <TextBlock Text="Video Quality:" Grid.Row="3" FontSize="20" Margin="20,10,20,10"/>
+        <StackPanel Margin="20,5,0,0" Grid.Row="4" Grid.Column="0" Orientation="Vertical">
+            <RadioButton x:ConnectionId='9' Name="quality_480p" Content="480p" GroupName="Quality"                          />
+            <RadioButton x:ConnectionId='10' Name="quality_720p" Content="720p" GroupName="Quality"                          />
+            <RadioButton x:ConnectionId='11' Name="quality_1080p" Content="1080p" GroupName="Quality"                          />
+            <TextBlock Margin="0,5,0,0" Text="(If available)" />
+        </StackPanel>
+        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" Margin="20,10,20,10" Text="Split code into files:"/>
+        <StackPanel Margin="20,5,0,0" Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" Orientation="Vertical">
+            <RadioButton x:ConnectionId='5' IsEnabled="False" Name="dSplit" Content="Default" GroupName="fileSplit"                         />
+            <RadioButton x:ConnectionId='6' IsEnabled="False" Name="three" Content="3" GroupName="fileSplit"                         />
+            <RadioButton x:ConnectionId='7' IsEnabled="False" Name="two" Content="2" GroupName="fileSplit"                         />
+            <RadioButton x:ConnectionId='8' IsEnabled="False" Name="one" Content="1" GroupName="fileSplit"                         />
+        </StackPanel>
+        <StackPanel Margin="20,20,20,10" Grid.Row="4" Grid.Column="1" Orientation="Vertical">
+            <TextBlock Margin="0,5,0,0" FontSize="20" Text="Save settings:"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='2' Name="saveSettings" Margin="0,40" Width="75" Height="30" Content="Save"                            IsEnabled="True"/>
+                <Button x:ConnectionId='3' Name="getSettings" Margin="40" Width="75" Height="30" Content="Browse"                           IsEnabled="True"/>
+                <Button x:ConnectionId='4' Name="setDefault" Margin="0" Width="100" Height="30" Content="Set Default"                          IsEnabled="True"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
+
